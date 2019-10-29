@@ -3,13 +3,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
    devtool: 'eval-source-map',
-   entry: {
-	  main: './main.js', 
-	  main_state : './main_state.js'
-   },
+   entry: './main.js',
    output: {
       path: path.join(__dirname, '/bundle'),
-      filename: '[name].js'
+      filename: 'index_bundle.js'
    },
    devServer: {
       inline: true,
@@ -23,24 +20,10 @@ module.exports = {
             loader: 'babel-loader'
          }
       ]
-   }/*,
-   //DISABLE IF YOU USE DEV SERVER
+   },
    plugins:[
       new HtmlWebpackPlugin({
          template: './index.html'
-      })
-   ]
-   */
-   ,plugins:[
-      new HtmlWebpackPlugin({
-         template: './index_template.html',
-		 chunks: ['main'],
-		 filename: './index.html',
-      }),
-	  new HtmlWebpackPlugin({
-         template: './index_template.html',
-		 chunks: ['main_state'],
-		 filename: './main_state.html',
       })
    ]
 }

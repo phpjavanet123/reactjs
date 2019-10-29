@@ -1,0 +1,9 @@
+https://medium.com/a-beginners-guide-for-webpack-2/multi-page-applications-4ae2ebfabc37
+
+
+r_satanovskyi@NIC1-W-PC-08455 MINGW64 ~/projects/reactjs/reactApp (master)
+$ npm run start
+
+
+http://localhost:8001/
+http://localhost:8001/main_state.html
